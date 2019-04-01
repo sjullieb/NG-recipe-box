@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './models/recipe.models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  borshIngs: string[] = ['beetroot', 'meat'];
+  borshDescr: string = 'Wash and cook!';
+  recipeBox: Recipe[] = [
+    new Recipe("Borsh", this.borshIngs, this.borshDescr),
+    new Recipe("Oliv'e salad", ["Mayo", "Peas", "Potato"], "Cut, add mayo, eat!")
+  ]
+
+  
 }
